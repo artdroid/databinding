@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+>
+    <data>
+        <variable name="book" type="com.android.belajar.databindingexample.Book"/>
+
+        <!--2nd-->
+        <variable name="activity" type="com.android.belajar.databindingexample.MainActivity" />
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:context=".MainActivity"
+            android:clickable="true"
+            android:focusable="true"
+    >
+
+    <TextView
+            android:id="@+id/book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@{book.title}"
+            android:onClick="@{()-> activity.onClickTitle(book)}"
+            />
+
+    <TextView
+            android:id="@+id/book_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@{book.author}"
+            tools:text="Book Author"
+            android:onClick="@{()-> activity.onClickTitle(book)}"
+            />
+
+    </LinearLayout>
+</layout>
