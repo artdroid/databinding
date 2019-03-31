@@ -27,7 +27,7 @@
             android:clickable="true"
             android:focusable="true"
             android:text="@{book.title}"
-            android:onClick="@{()-> activity.onClickTitle(book)}"
+            android:onClick="@{()-> activity.onClickFunction(book)}"
             />
 
     <TextView
@@ -37,7 +37,7 @@
             android:padding="16dp"
             android:text="@{book.author}"
             tools:text="Book Author"
-            android:onClick="@{()-> activity.onClickTitle(book)}"
+            android:onClick="@{()-> activity.onClickFunction(book)}"
             />
 
     </LinearLayout>

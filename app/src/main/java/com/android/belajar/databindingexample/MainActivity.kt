@@ -17,12 +17,12 @@ class MainActivity : AppCompatActivity() {
         binding.activity = this
 
         // 1St Attemp (using data class)
-        val book = Book("Belajar-Android", "Penulis lepas")
+        val book = Book("Belajar-Android", "artdroidindonesia")
         binding.setVariable(BR.book, book)
         binding.executePendingBindings()
     }
 
-    fun onClickTitle(x: Book){
+    fun onClickFunction(x: Book){
         Log.e("Click", "onClick!!")
         Toast.makeText(this, "Book title: ${x.title} Book author: ${x.author}", Toast.LENGTH_LONG).show()
     }
